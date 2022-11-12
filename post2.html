@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Net is Knowledge</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="navbar"  id="myTopnav">
+      <a href="index.html"><b>NetsKnow</b>.com</a>
+      <a href="blog/index.php">Blog</a>
+      <a href="docs.html">Docs</a>
+      <a href="album.html">Album</a>
+      <a href="lyrics.html">Lyrics</a>
+      <a href="about.html">About</a>
+      <a href="#" class="right">Login</a>
+      <div class="search-container">
+        <form action="#">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="side">
+        <h3>Front-End</h3>
+        <a>HTML</a>
+        <a>CSS</a>
+        <a>JavaScript</a>
+        <a>Vue</a>
+        <a>React</a>
+        
+        <h3>Back-End</h3>
+        <a>Express/Node</a>
+        <a>Flask/Python</a>
+        <a>Django/Python</a>
+        <a>Spring/Java</a>
+        <a>ASP.Net/C#</a>
+        <a>PHP</a>
+        
+        <h3>Databases</h3>
+        <a>MySQL/MariaDB</a>
+        <a>PostgreSQL</a>
+        <a>MongoDB</a>
+        <a>Redis</a>
+      </div>
+
+      <div class="content">
+
+        <h2>关于web服务器</h2>
+        <p><i>2022-10-02</i></p>
+    
+        <p>浏览器通过域名寻找服务器，并请求特定路径的资源，服务器根据请求将所需的文件发送给浏览器，这个转换过程肯定不是理所当然的，而是通过特定的程序实现的，这就是web服务器程序。常用的有apache, nginx以及win限定的iis。apache是经典的服务器程序，性能稳定且功能丰富，nginx适合做反向代理或负载均衡，虽然小巧但性能很高。</p>
+    
+        <p>客户端的请求一般是发向服务器的特定端口的，例如http网页使用80端口，服务器程序监听端口，并将其与服务器上的特定目录联系在一起，浏览器可以像访问文件夹一样浏览其中的文件，不过一般来说服务器程序提供文件夹中的index.html文件作为网站的首页，其他文件通过首页中的链接来访问。</p>
+    
+        <p>一台服务器往往可以支持多个网站的运作，但80口只有一个，简单的方式是用域名后子文件夹的方式访问，在服务器设置中叫做alias，对应的本地文件夹可以在主目录也可以任何地方。另一个常用的方法就是虚拟主机，可以把不同的域名都对应到同一服务器，由于不同的域名保存在http请求头中，程序可以识别后返回不同的网站根目录。比起完全不同的域名，对于同一网站可以用子域名来访问不同的板块。如果服务器处于局域网中，也可以把不同的网站服务关联到不同主机的ip地址，并实现负载均衡。</p>
+    
+        <p>使用最广泛的网站动态语言可以说是php，拥有大量成熟的应用程序满足网站的需求。服务器程序本身并不支持php，apache使用mod来支持，而nginx使用fcgi通过php-fpm端口通信。php包含多种扩展支持不同的功能，比如图像编码数据库等，进一步配置由服务器程序读取php.ini文件获得。php网站的首页为index.php，服务器程序一般用正则表达式过滤需要处理的php文件。很多php代码是直接写在网页里的，这也叫做脚本语言。</p>
+    
+        <p>在网址路径中可以包含参数通过GET方法提交表单或传送数据，对于php页面也可以将参数传到php程序中去从而执行不同的操作显示不同的页面。比如我们可以将文章标题做为参数传给php程序，程序从数据库取出文本与网页模板结合形成最终页面。但是带参数的路径阅读起来很费劲也不容易被搜索引擎记录，因此可以借助服务器程序的rewrite功能，将简洁易懂的路径转换为带参数的路径让程序识别，地址栏显示的是自定义的简洁路径，包含参数信息。提取参数一般使用正则表达式，apache可以使用.htaccess文件来设定重写，nginx需要自己在设置中添加带参数的重写命令。</p>
+    
+        <p>许多用其他语言写的网站程序并不直接与服务器程序沟通，而是作为独立的程序运行在特定端口比如8000，这时如果依然要通过本来的服务器程序访问，就需要建立反向代理，将服务器程序的80口与网站程序的8000口连接起来，在外部看来就像直接访问网站程序一样。可以用这种方式在同一服务器上挂载多个网站，或者作为负载均衡器管理集群服务器。例如由nginx做反向代理，通过文件识别实现动静分离，即静态媒体文件存在专用的服务器或cdn，而动态请求交由apache处理，再分出做php解析的服务器，有主从备份读写分离的数据库服务器等。反向代理可以通过缓存降低网站负载，经常访问而不常更新的网页可以保留在反向代理服务器中，缓存可以放到内存中从而拥有更高的性能。</p>
+    
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>NetsKnow.com</p>
+      <p>Start making website in 2022</p>
+    </div>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+    </script>
+  </body>
+</html>

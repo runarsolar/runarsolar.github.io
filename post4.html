@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Net is Knowledge</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="navbar"  id="myTopnav">
+      <a href="index.html"><b>NetsKnow</b>.com</a>
+      <a href="blog/index.php">Blog</a>
+      <a href="docs.html">Docs</a>
+      <a href="album.html">Album</a>
+      <a href="lyrics.html">Lyrics</a>
+      <a href="about.html">About</a>
+      <a href="#" class="right">Login</a>
+      <div class="search-container">
+        <form action="#">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="side">
+        <h3>Front-End</h3>
+        <a>HTML</a>
+        <a>CSS</a>
+        <a>JavaScript</a>
+        <a>Vue</a>
+        <a>React</a>
+        
+        <h3>Back-End</h3>
+        <a>Express/Node</a>
+        <a>Flask/Python</a>
+        <a>Django/Python</a>
+        <a>Spring/Java</a>
+        <a>ASP.Net/C#</a>
+        <a>PHP</a>
+        
+        <h3>Databases</h3>
+        <a>MySQL/MariaDB</a>
+        <a>PostgreSQL</a>
+        <a>MongoDB</a>
+        <a>Redis</a>
+      </div>
+
+      <div class="content">
+
+        <h2>网站应用程序</h2>
+        <p><i>日期</i></p>
+    
+        <p>文件访问</p>
+        <p>梯子</p>
+        <p>下载工具</p>
+        <p>博客</p>
+        <p>网盘</p>
+        <p>相册</p>
+        <p>维基</p>
+        <p>论坛</p>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>NetsKnow.com</p>
+      <p>Start making website in 2022</p>
+    </div>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+    </script>
+  </body>
+</html>
+
+

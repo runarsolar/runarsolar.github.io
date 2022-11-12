@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Net is Knowledge</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="navbar"  id="myTopnav">
+      <a href="index.html"><b>NetsKnow</b>.com</a>
+      <a href="blog/index.php">Blog</a>
+      <a href="docs.html">Docs</a>
+      <a href="album.html">Album</a>
+      <a href="lyrics.html">Lyrics</a>
+      <a href="about.html">About</a>
+      <a href="#" class="right">Login</a>
+      <div class="search-container">
+        <form action="#">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="side">
+        <h3>Front-End</h3>
+        <a>HTML</a>
+        <a>CSS</a>
+        <a>JavaScript</a>
+        <a>Vue</a>
+        <a>React</a>
+        
+        <h3>Back-End</h3>
+        <a>Express/Node</a>
+        <a>Flask/Python</a>
+        <a>Django/Python</a>
+        <a>Spring/Java</a>
+        <a>ASP.Net/C#</a>
+        <a>PHP</a>
+        
+        <h3>Databases</h3>
+        <a>MySQL/MariaDB</a>
+        <a>PostgreSQL</a>
+        <a>MongoDB</a>
+        <a>Redis</a>
+      </div>
+
+      <div class="content">
+
+        <h2>文档形式的变换</h2>
+        <p><i>2022-10-4</i></p>
+        <p>网页中包含了大量文字内容，传统上这些内容都是写在html文档里的，如果你想要修改文章就意味着直接修改html文档。本来的文档可能是txt格式的，对于大量的段落你可能需要自己编一个程序给每个段落加上html标签。从交互的角度看显然是不人性化的，为什么不能直接在网页中加一个编辑按钮来修改呢。我们知道js脚本可以在网页中实现程序逻辑，做一个更新文本的编辑器并不是难事，但是更新的文本存到哪？显然应当是服务器的源文件，但是原则上js脚本只运行在本地浏览器之中，是不能修改服务器文件的。这种需求显然是有必要解决的，所有有了使用不同语言在服务器编程的运行环境，并有多种成熟的web框架可供使用。常用的语言有同样使用js的node，流行的python，专业性的java和c#，传统的php和ruby，新兴的go等。</p>
+        <p>虽然用程序直接修改html文件也是可行的，不过网站都已经是程序了，就不必再纠结具体的html文件了，也就是说网站回复的请求是用模板和内容现做的网页，虽然你可以把文字内容存成大量txt文件，不过传统上有更好的做法，就是使用数据库。数据库可以看作是一种特殊的服务器程序，你可以通过发送请求sql语句来查询或修改数据库中的内容，一般来说数据库中包含大量的表格，表格之间可以建立引用关系，也叫做关系数据库。有了数据库，网站可以通过网络访问的方式读取内容，你在浏览器修改的内容也可以存入数据库。不过网站是谁都可以访问的，如果把数据库做成谁都能访问的在安全性上有很大问题，所以一般来说网站程序负责做客户端和数据库的中间人，网站可以根据客户端的请求查找数据库，生成网页返回客户端，也可以接收客户端做过的修改，再将其写入数据库。当然这时候客户端就不需要用sql语句了，事实上服务器程序也不怎么用，而是采用对象直接存储的方法，通过使用封装后的方法来间接操纵数据库。这时客户端与服务器之间的数据交换采取特殊的格式，常见的就是json和xml，特别是json与js语言中的对象无缝转换。</p>
+        <p>网页中的主要内容就是文字，但不同的文字是可以组织起来形成结构的，为了能够方便处理这些数据，js常使用面向对象的方法，就像表格一样把数据存到对象中，其纯文本形式就是json了，包含嵌套式的键值对应。比如你编辑以前文章，可以包含标题作者时间内容等等，这就是json中的一条数据，json可以包含一系列的文章列表，只要读取json文件就可以加载大量文章，其包含内在结构是比txt优越的地方。网站服务器提供一系列的应用程序接口api，来执行相应的数据操作，一般包含在请求的url中，网站程序通过解析url分辨不同的操作，而json数据可以通过POST方法在服务器与客户端间相互传输。大多数语言都有将json与自身数据格式转换的功能，这是一种通用的数据交换手段。另一种常见的数据格式是xml，其内在结构与json的嵌套键值很相似，只是标注采用的是类似html的标签。当然，每种程序语言都可以解析xml中的数据，使其作为网络间传输数据的方法，不过使用的场合比json少一点，因为网页兼服务器语言的js使用json更方便。</p>
+        <p>无论html,xml,json其标注形式都较为繁琐，虽然对于程序处理来说没什么难度，但是并不适合人来写作，于是一种标注简便又功能强大的文本格式markdown变得十分流行，不排除是因为每个github的README.md令其深入人心。除了基本的文本格式化功能外，markdown还支持代码高亮和数学公式，一方面很适合写计算机方面的文章，一方面也非常适合写科技方面的文章。如果你使用互动运行程序的jupyter笔记本，markdown也是其中重要的组成部分。当然，markdown不是一种孤立的格式，可以将其看成html格式的一种简化，也可以通过特定程序从markdown生成网页。因此如果你想要写网页上的文章，可以写成markdown格式，网页中的js程序会自动的将其妥善的显示出来。除了直接生成网页，很多网页上的内容编辑器也支持markdown语法，这样不用依靠过多额外的工具，就能简单的令文章内容得到丰富的排版。</p>
+        <p>rst</p>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>NetsKnow.com</p>
+      <p>Start making website in 2022</p>
+    </div>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+    </script>
+  </body>
+</html>
+
+

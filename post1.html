@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Net is Knowledge</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="navbar"  id="myTopnav">
+      <a href="index.html"><b>NetsKnow</b>.com</a>
+      <a href="blog/index.php">Blog</a>
+      <a href="docs.html">Docs</a>
+      <a href="album.html">Album</a>
+      <a href="lyrics.html">Lyrics</a>
+      <a href="about.html">About</a>
+      <a href="#" class="right">Login</a>
+      <div class="search-container">
+        <form action="#">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div class="row">
+      <div class="side">
+        <h3>Front-End</h3>
+        <a>HTML</a>
+        <a>CSS</a>
+        <a>JavaScript</a>
+        <a>Vue</a>
+        <a>React</a>
+        
+        <h3>Back-End</h3>
+        <a>Express/Node</a>
+        <a>Flask/Python</a>
+        <a>Django/Python</a>
+        <a>Spring/Java</a>
+        <a>ASP.Net/C#</a>
+        <a>PHP</a>
+        
+        <h3>Databases</h3>
+        <a>MySQL/MariaDB</a>
+        <a>PostgreSQL</a>
+        <a>MongoDB</a>
+        <a>Redis</a>
+
+      </div>
+
+      <div class="content">
+        <h2>网页设计</h2>
+        <p><i>2022-9-28</i></p>
+    
+        <p>网页是一种带有格式标注的文本文档，即html文档。同我们所熟悉的word文档并没有本质的区别，但网页有更强的功能开发性，就像跨平台的解释性语言一样，浏览器就是解释器。不过不考虑各种复杂功能的实现，网页就是一种文档，所以我们首先要考虑怎样构成用来记录和传达信息的文档</p>
+    
+        <p>对于文档来说最基本的就是标题与正文的搭配，通过不同层次的子标题来管理文章内容，并可以根据标题生成整篇文章的目录。对于文章性的网页，可以在开头制作目录，之后是文章主体。在网站中目录可以做成链接，通过点击跳到文章的不同部分。从基本的文档格式出发，通过设置css和js，可以把目录做成侧边栏，并且通过按钮收放。链接也不一定非要跳到相应的内容，而可以只通过点击在当前屏幕范围内显示需要的内容，从而形成互动性的对人类友好的文章。</p>
+    
+        <p>另一种网页形式类似于海报宣传单或广告，重要的是展示有限的内容，有必要从审美的视角进行妥善的设计。大多数时候网站的首页并不适合过长的文章，一般可以通过放置文章的链接列表来进行导航，这时网页就像一种简洁的目录。页面与文章相互链接形成目录结构，这是网站的基本构成方式，不过过深的目录容易把人搞晕，还是较浅并配有导航栏的结构浏览起来更轻松。</p>
+    
+        <p>网站首页作为目录可以以文章列表为主体，对于资讯站点来说就是更新的新闻，对于论坛来说就是讨论贴。文章链接可以是文章的标题，不过为了更容易把握内容的概况，可以配合图片关键信息内容预览和排版上的设计。这里的每个模块都可以赋予丰富的功能，例如可点击展开的内容或评论区，以及方便的功能快捷按钮。模块化不仅用于网页内的对象，网页本身也可以模板化，不同的网页共用相同的导航栏和css样式，使得在网站浏览中获得统一的感官体验，让人有这就是这个网站的风格的第一印象。</p>
+    
+        <p>模板制造了大量相似的网页，也引入了大量重复的代码，对于传统的静态网页是难以避免的，不过静态网页结构简单加载速度快，对于小站点也不用考虑多耗费的流量。但是，既然有了计算机，为什么还要大量重复工作呢，所以现代的网站本身是一个应用程序，可以根据主题模板和文章文本自动生成所需的网页，也叫做动态网页。</p>
+    
+        <p>实现这种方式的语言很多，例如python,java,c#或ruby,go等，值得注意的是网页或浏览器拥有自带的脚本语言即js。虽然js一般是随着网页一起传送而来在浏览器中运作的，并不是网站运行的程序，但js可以向网站发起请求，得到文章的文本并在浏览器端生成完整的网页。这也是一种动态网页，由于很多计算量从网站服务器移动到了客户端，这对于现代很多高流量网站来说，降低了负载并提升了网站的稳定性，网站的设计也开始分成前端与后端两方面来考虑。</p>
+    
+        <p>前端得以从网站程序中分离出来的重要原因是现代客户端的多样性，包括传统的电脑浏览器，平板电脑，智能手机上的浏览器，更重要的是手机里的各种应用，在手机应用里还可以内置浏览器或不同类型的小程序。对于大多数应用，实现的功能是固定的，所以这些功能的抽象放在了网站后端即服务器，通过数据交换来支持不同的客户端或前端程序。这种模式是设计程序的惯例，很多本地程序也将界面要素和背后逻辑分开来处理，从而方便的实现设计工作的分工。</p>
+    
+        <p>网站界面的主体由html构成，可以通过css设计其中每个元素的显示方式，从而得到美观的网页。但如果要实现特定的逻辑功能，比如一些控制按钮或自动运行或生成的内容，就需要js对网页中的元素进行编程。对于简单的网页形式来说，有一个控制导航栏显示的按钮似乎就足够了，但对于日益增多的移动端浏览需求，基本上要求网页是一个功能全面交互良好的应用程序。这样的网页往往包含大量的按钮菜单和功能设置，如果用传统方式来做，可能需要复杂的层次结构并在不同的网页中跳转，但借助js编程，可以在同一个页面中实现所有的内容切换，或者说网站只需要一个网页。</p>
+    
+        <p>由于现代网页中包含极多的功能逻辑，全部从零开始用js实现显然是费时费力的事，所以把实用的功能打包好，编程中只做简单的调用就可以了，例如常用的jquery库。不仅是js，对于css也有类似的工具，提供已经做好的视觉模块，只要进行简单的调用和设置就能快速得到专业的网页设计成品，其中最流行的就是bootstrap。一开始这些功能实现是在网页中置入引用链接，具体代码仍然在最终网页内完成，但如果我们需要的是在单页面中包含不同的功能页面，每个子页面都包含自己的逻辑，更为理想的开发方式就是像传统程序一样，分别设计每个页面的界面和逻辑，最后令其自动的生成复杂的单页面网页应用，其实很多网页游戏就是这样的。为了满足这种需求，更复杂完善的js框架被开发出来，流行的有Angular,React,Vue等。</p>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>NetsKnow.com</p>
+      <p>Start making website in 2022</p>
+    </div>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+    </script>
+  </body>
+</html>
+
