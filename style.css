@@ -8,7 +8,7 @@ body {
 
 .navbar {
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
     box-shadow: 0 2px 2px #eee;
 }
 
@@ -19,7 +19,7 @@ body {
     float: left;
     text-align: center;
     text-decoration: none;
-    padding: 16px 20px;
+    padding: 15px 20px;
 }
 
 .navbar a:hover {
@@ -37,20 +37,19 @@ body {
 
 .navbar .search-container {
     float: right;
+    padding: 6px;
 }
 
 .navbar input[type=text] {
+    float: left;
     padding: 10px;
-    margin-top: 8px;
     font-size: 20px;
     border: none;
 }
 
 .navbar .search-container button {
-    float: right;
+    float: left;
     padding: 10px 14px;
-    margin-top: 8px;
-    margin-right: 10px;
     background: #eee;
     font-size: 20px;
     border: none;
@@ -62,7 +61,8 @@ body {
 }
 
 .hero {
-    padding: 20px 160px;
+    margin: 0 160px;
+    padding: 20px;
 }
 
 .hero img {
@@ -72,7 +72,8 @@ body {
 }
 
 .row {
-    padding: 0 160px;
+    margin: 0 160px;
+    padding: 0 20px;
     display: flex;
 }
 
@@ -106,9 +107,9 @@ body {
 }
 
 .footer {
-    margin: 0;
-    padding: 20px 160px;
-    height: 100px;
+    margin: auto;
+    padding: 20px 180px;
+    height: 120px;
     background-color: black;
 }
 
@@ -118,21 +119,30 @@ body {
     font-size: 14px;
 }
 
-@media screen and (max-width: 600px) {
-    .row {   
+@media screen and (max-width: 700px) {
+    .hero {
+        margin: auto;
+    }
+    .row {
+        margin: auto;
         flex-direction: column-reverse;
+    }
+
+    .footer {
+        padding: 20px;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .navbar a:not(:first-child) {display: none;}
+    .navbar .search-container {display: none;}
     .navbar a.icon {
       float: right;
       display: block;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .navbar.responsive {position: relative;}
     .navbar.responsive .icon {
       position: absolute;
@@ -143,6 +153,10 @@ body {
       float: none;
       display: block;
       text-align: left;
+    }
+    .navbar.responsive .search-container {
+        float: none;
+        display: block;
     }
 }
 
